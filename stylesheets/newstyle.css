@@ -1,0 +1,118 @@
+/*课程列表 begin*/
+
+.lesson-container {
+    padding: 50px 0 0 12px;
+}
+
+.lesson-container ul li {
+    width: 776px;
+    height: 100px;
+    background: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 10px 0;
+}
+.lessonplay .playericon {
+    position: absolute;
+    z-index: 4;
+    width: 50px;
+    height: 50px;
+    display: block;    
+    background: url(../images/player_icon_5c67475.png) no-repeat;
+    background-size: 50px 50px;
+    cursor: pointer;
+    left: 64px;
+    top: 27px;
+    opacity: 0;
+}
+.lessonimg-box:hover .playericon{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.lessonplay{
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: rgba(0,0,0,0);
+    transition: all 0.5s ease;
+}
+.lessonimg-box:hover .lessonplay{
+    background: rgba(0,0,0,0.3);
+    transition: all 1s ease;
+}
+.lesson-container h2 a {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+}
+
+.lesson-container em {
+    font-style: normal;
+    font-size: 13px;
+    color: #666;
+}
+
+.lessonimg-box img {
+    height: 100px;
+}
+
+.lessonimg-box {
+    width: 185px;
+    height: 100px;
+    overflow: hidden;
+    float: left;
+}
+
+.lessonplay {
+    width: 185px;
+    height: 100px;
+}
+
+.lesson-infor {
+    width: 580px;
+    float: left;
+}
+
+.lesson-info-h2 {
+    width: 580px;
+    height: 36px;
+    line-height: 14px;
+}
+
+.lesson-infor p {
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+    line-height: 12px;
+}
+
+.lesson-infor img {
+    width: 16px;
+}
+
+.lessonicon-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.learn-number {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+
+.grade {
+    position: absolute;
+    bottom: 0;
+    left: 320px;
+}
+.mar-b8{
+    position: absolute;
+    bottom: 0px;
+    left: 185px;
+}
+
+/*课程列表 end*/

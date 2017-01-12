@@ -1,0 +1,753 @@
+/*reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    color: #35b558;
+}
+
+img {
+    border: none;
+}
+
+
+/*头部logo及导航部分 begin*/
+
+.header {
+    width: 1000px;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header>a,
+.header>div {
+    float: left;
+}
+
+.header>a {
+    line-height: 60px;
+}
+
+.header>a img {
+    vertical-align: middle;
+}
+
+.header .header-nav>li {
+    float: left;
+    margin-left: 50px;
+    line-height: 60px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header .header-nav>li>a {
+    color: #35b558;
+}
+.arrow-icon {
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 4px 4px;
+    margin-left: 5px;
+}
+.header-nav li:hover i.arrow-icon {
+    margin-bottom: -2px;
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+
+@keyframes rotate {
+    0% {
+        margin-bottom: 2px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+    10% {
+        margin-bottom: -2px;
+    }
+   
+    100% {
+        transform: rotate(405deg);
+        -webkit-transform: rotate(405deg);
+        -moz-transform: rotate(405deg);
+        -ms-transform: rotate(405deg);
+    }
+}
+.header .submenu {
+    position: absolute;
+    font-size: 12px;
+    background: #fff;
+    padding: 0 15px;
+    width: 240px;
+    opacity: 0;
+    display: none;
+    z-index: 100;
+    line-height: 35px;
+}
+.header .submenu img{
+    width: 26px;height: 26px;
+    vertical-align: middle;
+}
+#wct{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+.header .submenu h3 {
+    color: #666;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.header .submenu a {
+    display: inline-block;
+    color: #666;
+}
+
+.header .submenu span {
+    float: right;
+    color: #666;
+}
+
+.header a:hover {
+    color: #35b558;
+}
+
+.icon-box {
+    margin-left: 284px;
+}
+
+.icon-box span {
+    margin-left: 25px;
+}
+
+.search-icon {
+    display: inline-block;
+    width: 17px;
+    height: 60px;
+    background: url(../images/search-icon.png) no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.search-icon:hover{}
+.app-icon {
+    display: inline-block;
+    position: relative;
+    width: 17px;
+    height: 60px;
+    background: url(../images/app-icon.png) no-repeat;
+    background-position: center;
+}
+
+.app-icon:hover>div {
+    display: block;
+    z-index: 3;
+}
+
+.ewm {
+    display: none;
+    position: absolute;
+    left: -50px;
+    top: 40px;
+}
+
+.ewm img {
+    width: 115px;
+}
+
+.login-ico {
+    display: inline-block;
+    position: relative;
+    width: 17px;
+    height: 60px;
+    background: url(../images/login-icon.png) no-repeat;
+    background-position: center;
+}
+
+.login-ico:hover>ul {
+    display: block;
+    z-index: 3;
+    background: #fff;
+}
+
+.login-list {
+    width: 100px;
+    position: absolute;
+    top: 60px;
+    left: -65px;
+    display: none;
+    font-size: 12px;
+    line-height: 28px;
+    padding: 0 10px 10px 7px;
+}
+.login-list li:nth-child(1)>a{
+    padding: 8px;
+}
+.login-list img{
+    vertical-align: middle;
+}
+.login-list a {
+    color: #333;
+}
+
+.searchbox {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 400px;
+    display: none;
+}
+
+.searchbox input {
+    margin: auto;
+    vertical-align: middle;
+    width: 300px;
+    border: none;
+    outline: none;
+}
+
+.searchbox a {
+    color: #666;
+}
+
+.tagbox {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.search2-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+    background: url(../images/search-icon.png) no-repeat;
+    background-position: center;
+}
+
+.close-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    background: url(../images/close-icon.png) no-repeat;
+    background-position: center;
+}
+
+
+/*头部logo及导航部分 end*/
+
+
+/*页面主体 begin*/
+
+.pagger {
+    width: 1000px;
+    margin: 30px auto 0 auto;
+    line-height: 1.5em;
+    position: relative;
+}
+
+
+/*左侧导航  begin*/
+
+#aside {
+    position: absolute;
+    left: 0;
+    z-index: 90
+}
+
+.list-show {
+    display: none;
+    position: absolute;
+    left: 206px;
+    width: 400px;
+    top: 0;
+    background: #fff;
+}
+
+.aside-allCategory {
+    position: relative;
+    border: 1px solid #35b558;
+    border-bottom: 1px solid #35b558;
+    width: 206px;
+    line-height: 3em;
+    font-size: 13px;
+}
+.aside-allCategory img{
+    width:15px;
+    height:15px;
+    vertical-align: middle; 
+    margin-right: 5px;
+}
+.aside-allCategory:hover {
+    border-right: 1px solid #fff;
+}
+
+.aside-allCategory h2 {
+    font-size: 13px;
+    font-weight: normal;
+    padding-left: 5px;
+}
+
+.aside-cList>li>div {
+    width: 206px;
+    z-index: 99;
+    padding-left: 24px;
+}
+
+.aside-cList>li>div:hover {
+    border: 1px solid #ccc;
+    width: 207px;
+    background: #fff;
+    margin-left: -1px;
+}
+
+.aside-cList>li>div:hover>a {
+    color: #35b558;
+}
+
+.aside-cList>li>div:hover>div {
+    display: block;
+    min-height: 431px;
+    border: 1px solid #fff;
+    border-left: none;
+    line-height: 2em;
+    padding-left: 24px;
+    margin-left: -2px;
+    background: #eee;
+}
+
+.list-show dt a {
+    font-size: 14px;
+    color: #333;
+    line-height: 3em;
+}
+
+.back-end {
+    height: 600px;
+}
+
+.hdlist {
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 3em;
+}
+
+.hdlist a {
+    color: #333;
+    width: 100%;
+    display: inline-block;
+}
+.hdlist img{
+    width:15px;
+    height:15px;
+    vertical-align: middle; 
+    margin-right: 5px;
+}
+
+.hdlist a:hover {
+    color: #35b558;
+}
+.hdlist .getmore{
+    font-size: 10px !important;
+    color: #333;
+    text-align: right;
+    float: right;
+    opacity: 0.5;
+    display: none;
+}
+.hdlist a:hover>.getmore{
+    display: inline;
+}
+/*左侧导航  end*/
+
+
+/*课程分类  begin*/
+
+.main {
+    margin-left: 206px;
+    position: relative;
+    z-index: 1;
+}
+
+.sortMode>h3,
+.sortMode>dl {
+    float: left;
+    font-size: 12px;
+    color: #666;
+    font-weight: normal;
+    width: 100px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.sortMode dl dd {
+    position: absolute;
+    display: none;
+    background: #fff;
+    width: 78px;
+    padding: 15px;
+    z-index: 2;
+    margin-left: -10px;
+}
+.sortMode dl .newhot{
+    width: 60px;
+}
+.sortMode dl:hover>dd {
+    display: block;
+}
+
+.previewMode {
+    float: right;
+}
+
+.previewMode div {
+    float: left;
+}
+
+.previewMode div img {
+    width: 50%
+}
+/*课程分类  end*/
+
+/*页数导航 begin*/
+#page-nav{
+    width: 900px;
+    margin-left: -20px;
+}
+#page-nav input{
+    text-align: left;
+    outline: none;
+}
+
+#page-nav li{
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    position: static;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.page-number:hover,
+.pgNext:hover{
+    border: 1px solid #35b558;
+}
+.pgCurrent{
+    border: 1px solid #35b558;
+    background:  #35b558;
+}
+.thpoint,
+.pgNext{
+    width: 67px !important;
+}
+.pgEmpty{
+    cursor: default!important; 
+    color: #777;   
+}
+.pgEmpty:hover{
+    border: none;
+}
+.pgEmpty,
+.pagetotal{
+    cursor: default!important;
+}
+/*页数导航 end*/
+/*页面主体 end*/
+
+
+/*底部信息 begin*/
+
+.footer a {
+    text-decoration: none
+}
+
+.footer div,
+.footer p,
+.footer dd,
+.footer dl,
+.footer dt {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.footer {
+    min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background: #fff;
+}
+
+.footer .jkinfor-block {
+    background: #fff;
+}
+
+.footer .jkinfor-block .jkinfor {
+    position: relative;
+    width: 1000px;
+    height: 215px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f5f5f5;
+    padding-left: 224px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+.footer .jkinfor-block .jkinfor .jk-logo {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: inline-block;
+    width: 160px;
+}
+
+.footer .jkinfor-block .jkinfor .jk-logo img {
+    width: 109px;
+    height: 40px;
+    display: block;
+}
+
+.footer .jkinfor-block .jkinfor .jk-logo p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.footer .jkinfor dl {
+    width: 135px;
+    color: #808080;
+    float: left;
+}
+
+.footer .jkinfor dl dt {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footer .jkinfor dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.footer .jkinfor dl dt a {
+    color: #808080;
+}
+
+.footer .jkinfor dl dd a {
+    color: #999999;
+}
+
+.footer .jkinfor a:hover {
+    color: #35b558;
+}
+
+.footer .jk-down {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+}
+
+.footer .jk-down .hot-tel {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer .jk-down .downCon {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 13px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.footer .jk-down .downCon img {
+    display: inline-block;
+    width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2;
+    display: none;
+}
+
+.footer .jk-down .downCon:hover img {
+    display: block;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer .copyright a {
+    color: #999;
+}
+
+.footer .copyright a:hover {
+    color: #35B558;
+}
+
+.footer .copyright a.down-sina {
+    float: right;
+    height: 15px;
+    width: 20px;
+    margin-right: 10px;
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-sina.png)no-repeat 0 0;
+    background-size: 20px 15px;
+}
+
+.footer .copyright a.down-wechat {
+    float: right;
+    height: 15px;
+    width: 20px;
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-wechat.png)no-repeat 0 0;
+    background-size: 18px 15px;
+}
+/*底部信息 end*/
+
+
+/*回到顶部部分 begin*/
+
+.gotop {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+    display: none;
+}
+
+.gotop span {
+    cursor: pointer
+}
+
+.gotop span.top {
+    display: block;
+    background: url(../images/gotop.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px
+}
+
+.gotop span.top:hover {
+    background: url(../images/gotop2.jpg) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 34px 103px;
+    -webkit-background-size: 34px 103px;
+    -moz-background-size: 34px 103px
+}
+
+.gotop span.erwma {
+    position: relative;
+    display: block;
+    background: url(../images/gotop.jpg) 0 -34px no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 35px;
+    display: none;
+}
+
+.gotop span.jk-app {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../images/phone-1.png) center center no-repeat;
+    background-size: 12px 24px;
+    width: 34px;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.gotop span.jk-app:hover {
+    background: #f7f7f7 url(../images/phone-2.png) center center no-repeat;
+    background-size: 12px 24px
+}
+
+.gotop span.jk-app:hover .appewm {
+    display: block;
+}
+
+.appewm {
+    background: url(../images/appewm.png) center center no-repeat;
+    background-size: 100%;
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none
+}
+
+.gotop span.erwma img,
+.gotop span.jk-app img {
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none
+}
+
+.gotop a.diaocha {
+    display: block;
+    width: 34px;
+    height: 34px
+}
+
+.gotop span.erwma:hover {
+    background: url(images/gotop2.jpg) 0 -34px no-repeat;
+    background-size: 34px 103px;
+    -webkit-background-size: 34px 103px;
+    -moz-background-size: 34px 103px
+}
+/*回到顶部部分 end*/
